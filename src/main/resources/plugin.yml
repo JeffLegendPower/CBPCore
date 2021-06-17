@@ -1,0 +1,6 @@
+name: CBPCore
+version: ${project.version}
+main: io.github.jefflegendpower.cbpcore.CBPCore
+api-version: 1.16
+authors: [ JeffLegendPower ]
+description: CrackedBedwarsPractice Core plugin
