@@ -3,17 +3,14 @@ package io.github.jefflegendpower.cbpcore.modes.arena;
 import com.grinderwolf.swm.api.world.SlimeWorld;
 import io.github.jefflegendpower.cbpcore.config.Config;
 import io.github.jefflegendpower.cbpcore.modes.Mode;
-import io.github.jefflegendpower.cbpcore.worlds.CreatePracticeWorld;
+import io.github.jefflegendpower.cbpcore.CreatePracticeWorld;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
 import java.util.HashMap;

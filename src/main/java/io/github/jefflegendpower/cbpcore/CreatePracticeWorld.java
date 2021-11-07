@@ -1,23 +1,15 @@
-package io.github.jefflegendpower.cbpcore.worlds;
+package io.github.jefflegendpower.cbpcore;
 
 import com.grinderwolf.swm.api.SlimePlugin;
 import com.grinderwolf.swm.api.exceptions.*;
 import com.grinderwolf.swm.api.loaders.SlimeLoader;
 import com.grinderwolf.swm.api.world.SlimeWorld;
 import com.grinderwolf.swm.api.world.properties.SlimeProperties;
-import com.grinderwolf.swm.api.world.properties.SlimeProperty;
 import com.grinderwolf.swm.api.world.properties.SlimePropertyMap;
-import io.github.jefflegendpower.cbpcore.CBPCore;
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.entity.Player;
-import org.bukkit.entity.Slime;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.util.UUID;
-import java.util.concurrent.CountDownLatch;
-import java.util.function.Supplier;
 
 public class CreatePracticeWorld {
 
