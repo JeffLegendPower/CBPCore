@@ -4,3 +4,14 @@ main: io.github.jefflegendpower.cbpcore.CBPCore
 api-version: 1.16
 authors: [ JeffLegendPower ]
 description: CrackedBedwarsPractice Core plugin
+depend:
+  - Multiverse-Core
+  - SmartInvs
+  - WorldEdit
+  - WorldGuard
+  - Citizens
+  - ProtocolLib
+commands:
+  start:
+    description: Open the Practice GUI
+    usage: /<command>

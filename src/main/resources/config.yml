@@ -1,5 +1,29 @@
-host: ''
-port: '3306'
-database: ''
-username: ''
-password: ''
+SQL:
+  host: ''
+  port: '3306'
+  database: ''
+  username: ''
+  password: ''
+
+Spawn:
+  world: ''
+  x: ''
+  y: ''
+  z: ''
+
+Template:
+  tnt_jump:
+    name: ''
+    spawn_loc:
+  fireball_jump:
+    name: ''
+    spawn_loc:
+  speed_clutch:
+    name: ''
+    spawn_loc:
+  knockback_clutch:
+    name: ''
+    spawn_loc:
+  block_in:
+    name: ''
+    spawn_loc:
