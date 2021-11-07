@@ -27,17 +27,6 @@ import java.util.List;
 public class LeaveArena implements Listener {
 
     @EventHandler
-    public void onPlayerBlockSword(PlayerInteractEvent event) {
-        Player player = event.getPlayer();
-
-        if ((event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK)
-                && player.getItemInHand().isSimilar(getLeaveSword())) {
-            PlayerLeaveArenaEvent leaveArenaEvent = new PlayerLeaveArenaEvent(player);
-            Bukkit.getPluginManager().callEvent(leaveArenaEvent);
-        }
-    }
-
-    @EventHandler
     public void onPlayerLeave(PlayerQuitEvent event) {
         Player player = event.getPlayer();
         PlayerLeaveArenaEvent leaveArenaEvent = new PlayerLeaveArenaEvent(player);

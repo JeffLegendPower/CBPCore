@@ -3,6 +3,8 @@ package io.github.jefflegendpower.cbpcore;
 import com.onarandombox.MultiverseCore.MultiverseCore;
 import io.github.jefflegendpower.cbpcore.commands.OpenGUI;
 import io.github.jefflegendpower.cbpcore.config.Config;
+import io.github.jefflegendpower.cbpcore.items.GUICompass;
+import io.github.jefflegendpower.cbpcore.items.LeaveSword;
 import io.github.jefflegendpower.cbpcore.modes.StopHunger;
 import io.github.jefflegendpower.cbpcore.modes.StopItemDrop;
 import io.github.jefflegendpower.cbpcore.modes.arena.BlocksChangedInArena;
@@ -99,6 +101,9 @@ public final class CBPCore extends JavaPlugin {
 
         registerEvent(new BlockInStart());
         registerEvent(BlockIn.getInstance());
+
+        registerEvent(new GUICompass());
+        registerEvent(new LeaveSword());
 
         CitizensAPI.getTraitFactory().registerTrait(TraitInfo.create(io.github.jefflegendpower.cbpcore.traits.OpenGUI.class).
                 withName("openpracticegui"));
