@@ -1,5 +1,6 @@
 package io.github.jefflegendpower.cbpcore.modes;
 
+import io.github.jefflegendpower.cbpcore.items.LeaveSword;
 import io.github.jefflegendpower.cbpcore.modes.arena.Arena;
 import io.github.jefflegendpower.cbpcore.modes.arena.ArenaManager;
 import io.github.jefflegendpower.cbpcore.modes.arena.LeaveArena;
@@ -37,6 +38,6 @@ public abstract class PlayerHitGoldBlock {
         player.teleport(spawnLoc);
 
         InventoryUtils.giveItems(player, arenaItem.item());
-        InventoryUtils.setItem(player, 8, LeaveArena.leaveSword());
+        InventoryUtils.setItem(player, 8, LeaveSword.getLeaveSword());
     }
 }

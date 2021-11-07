@@ -2,6 +2,7 @@ package io.github.jefflegendpower.cbpcore.modes.bedwarspractice.fireball;
 
 import io.github.jefflegendpower.cbpcore.config.Config;
 import io.github.jefflegendpower.cbpcore.events.PracticeStartEvent;
+import io.github.jefflegendpower.cbpcore.items.LeaveSword;
 import io.github.jefflegendpower.cbpcore.modes.arena.LeaveArena;
 import io.github.jefflegendpower.cbpcore.modes.Mode;
 import io.github.jefflegendpower.cbpcore.modes.Start;
@@ -30,6 +31,6 @@ public class FireballJumpStart implements Start {
         player.teleport(fireballArena.getSpawnLocation());
 
         InventoryUtils.giveItems(player, new FireballItem().item());
-        InventoryUtils.setItem(player, 8, LeaveArena.leaveSword());
+        InventoryUtils.setItem(player, 8, LeaveSword.getLeaveSword());
     }
 }

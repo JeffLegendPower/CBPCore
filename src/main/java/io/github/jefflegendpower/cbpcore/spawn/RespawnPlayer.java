@@ -3,6 +3,7 @@ package io.github.jefflegendpower.cbpcore.spawn;
 import com.sk89q.worldedit.WorldEdit;
 import io.github.jefflegendpower.cbpcore.config.Config;
 import io.github.jefflegendpower.cbpcore.events.PlayerFallInVoidEvent;
+import io.github.jefflegendpower.cbpcore.items.LeaveSword;
 import io.github.jefflegendpower.cbpcore.modes.arena.LeaveArena;
 import io.github.jefflegendpower.cbpcore.modes.arena.Arena;
 import io.github.jefflegendpower.cbpcore.modes.arena.ArenaManager;
@@ -40,7 +41,7 @@ public class RespawnPlayer implements Listener {
             player.teleport(arena.getSpawnLocation());
             InventoryUtils.clearInventory(player);
             InventoryUtils.giveItems(player, arena.getRelatedItems());
-            InventoryUtils.setItem(player, 8, LeaveArena.leaveSword());
+            InventoryUtils.setItem(player, 8, LeaveSword.getLeaveSword());
 
             for (Block block : arena.getPlayerPlacedBlocks())
                 block.setType(Material.AIR);

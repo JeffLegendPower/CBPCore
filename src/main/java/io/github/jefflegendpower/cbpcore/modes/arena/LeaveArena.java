@@ -3,11 +3,13 @@ package io.github.jefflegendpower.cbpcore.modes.arena;
 import io.github.jefflegendpower.cbpcore.config.Config;
 import io.github.jefflegendpower.cbpcore.events.PlayerLeaveArenaEvent;
 import io.github.jefflegendpower.cbpcore.events.PracticeStartEvent;
+import io.github.jefflegendpower.cbpcore.items.LeaveSword;
 import io.github.jefflegendpower.cbpcore.modes.arena.Arena;
 import io.github.jefflegendpower.cbpcore.modes.arena.ArenaManager;
 import io.github.jefflegendpower.cbpcore.utility.InventoryUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import static io.github.jefflegendpower.cbpcore.items.LeaveSword.*;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -29,7 +31,7 @@ public class LeaveArena implements Listener {
         Player player = event.getPlayer();
 
         if ((event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK)
-                && player.getItemInHand().isSimilar(leaveSword())) {
+                && player.getItemInHand().isSimilar(getLeaveSword())) {
             PlayerLeaveArenaEvent leaveArenaEvent = new PlayerLeaveArenaEvent(player);
             Bukkit.getPluginManager().callEvent(leaveArenaEvent);
         }
@@ -45,8 +47,6 @@ public class LeaveArena implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerLeaveArena(PlayerLeaveArenaEvent event) {
         Player player = event.getPlayer();
-
-//        player.teleport(new Location(Bukkit.getWorld("world"), 0, 70, 0));
         player.teleport(new Config().getSpawn());
         ArenaManager arenaManager = ArenaManager.getInstance();
         Arena arena = arenaManager.getArenaFromPlayer(player);
@@ -54,21 +54,8 @@ public class LeaveArena implements Listener {
         arenaManager.deleteArena(arena);
     }
 
-    public static ItemStack leaveSword() {
-        ItemStack leaveSword = new ItemStack(Material.IRON_SWORD);
-        ItemMeta itemMeta = leaveSword.getItemMeta();
-        itemMeta.setDisplayName("Leave");
-
-        List<String> lore = new ArrayList<>();
-        lore.add("Block to leave!");
-        itemMeta.setLore(lore);
-
-        leaveSword.setItemMeta(itemMeta);
-        return leaveSword;
-    }
-
     @EventHandler(priority = EventPriority.HIGH)
     public void giveLeaveSword(PracticeStartEvent event) {
-        InventoryUtils.setItem(event.getPlayer(), 8, leaveSword());
+        InventoryUtils.setItem(event.getPlayer(), 8, getLeaveSword());
     }
 }
