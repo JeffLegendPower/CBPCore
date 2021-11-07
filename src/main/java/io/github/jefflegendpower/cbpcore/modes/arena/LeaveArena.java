@@ -9,7 +9,7 @@ import io.github.jefflegendpower.cbpcore.modes.arena.ArenaManager;
 import io.github.jefflegendpower.cbpcore.utility.InventoryUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import static io.github.jefflegendpower.cbpcore.items.LeaveSword.*;
+import static io.github.jefflegendpower.cbpcore.items.LeaveSword.getLeaveSword;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
