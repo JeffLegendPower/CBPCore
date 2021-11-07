@@ -15,8 +15,7 @@ public abstract class PlayerHitGoldBlock {
         Player player = event.getPlayer();
 
         Arena arena = arenaManager.getArenaFromPlayer(player);
-        if (arena == null) return;
-        if (arena.getType() != mode) return;
+        if (arena == null || arena.getType() != mode) return;
 
         Location blockLocation = player.getLocation().clone().subtract(0, 1, 0);
         for(int x = -1; x<=1; x++) {
