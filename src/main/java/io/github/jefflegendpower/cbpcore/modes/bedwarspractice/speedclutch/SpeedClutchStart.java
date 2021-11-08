@@ -27,10 +27,9 @@ public class SpeedClutchStart implements Start {
             arenaManager.deleteArena(arena);
         ItemStack items = new BlockItem().item();
         Arena clutchArena = ArenaManager.getInstance().getNewArena(Mode.SPEED_CLUTCH, event.getPlayer(), new Config().getTemplateWorld("speed_clutch"), items);
-//        Location spawnLocation = clutchArena.getLocation().add(0.5, 0, 0.5);
-//        spawnLocation.setYaw(180);
-//        clutchArena.setSpawnLocation(spawnLocation);
         arenaManager.createArena(clutchArena);
+        player.teleport(clutchArena.getSpawnLocation());
+        InventoryUtils.clearInventory(player);
         InventoryUtils.giveItems(player, clutchArena.getRelatedItems());
     }
 }

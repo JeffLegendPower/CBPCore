@@ -28,11 +28,8 @@ public class KnockbackClutchStart implements Start {
             arenaManager.deleteArena(arena);
         ItemStack items = new BlockItem().item();
         Arena clutchArena = ArenaManager.getInstance().getNewArena(Mode.KNOCKBACK_CLUTCH, event.getPlayer(), new Config().getTemplateWorld("knockback_clutch"), items);
-//        Location spawnLocation = clutchArena.getLocation().add(0.5, 0, 0.5);
-//        spawnLocation.setYaw(180);
-//        clutchArena.setSpawnLocation(spawnLocation);
         arenaManager.createArena(clutchArena);
-//        player.teleport(new Location(Bukkit.getWorld(clutchArena.getSlimeWorld()), 0, 70, 0));
+        InventoryUtils.clearInventory(player);
         InventoryUtils.giveItems(player, clutchArena.getRelatedItems());
     }
 }

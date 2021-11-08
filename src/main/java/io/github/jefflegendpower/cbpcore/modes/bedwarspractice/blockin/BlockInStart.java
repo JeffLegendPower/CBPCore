@@ -34,6 +34,7 @@ public class BlockInStart implements Start {
         Arena blockInArena = ArenaManager.getInstance().getNewArena(Mode.BLOCK_IN, event.getPlayer(), new Config().getTemplateWorld("block_in"), blocks, pick, axe);
 
         arenaManager.createArena(blockInArena);
+        InventoryUtils.clearInventory(player);
         InventoryUtils.giveItems(player, blockInArena.getRelatedItems());
         System.out.println("arena loaded");
     }

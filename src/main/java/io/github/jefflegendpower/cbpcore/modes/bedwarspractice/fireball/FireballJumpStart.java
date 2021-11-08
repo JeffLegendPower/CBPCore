@@ -30,6 +30,7 @@ public class FireballJumpStart implements Start {
         arenaManager.createArena(fireballArena);
         player.teleport(fireballArena.getSpawnLocation());
 
+        InventoryUtils.clearInventory(player);
         InventoryUtils.giveItems(player, new FireballItem().item());
         InventoryUtils.setItem(player, 8, LeaveSword.getLeaveSword());
     }

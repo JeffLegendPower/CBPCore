@@ -22,7 +22,7 @@ public class PlayerSpawn implements Listener {
         player.teleport(Bukkit.getWorld(new Config().getConfig().getString("Spawn.world")).getHighestBlockAt(new Config().getSpawn()).getLocation());
         // Empty their inventory and put what's needed
         player.getInventory().clear();
-        InventoryUtils.setItem(player, 1, getGUICompass());
+        InventoryUtils.setItem(player, 0, getGUICompass());
     }
 
 }

@@ -31,6 +31,7 @@ public class TNTJumpStart implements Start {
 
         player.teleport(TNTArena.getSpawnLocation());
 
+        InventoryUtils.clearInventory(player);
         InventoryUtils.giveItems(player, new TNTItem().item());
     }
 }
