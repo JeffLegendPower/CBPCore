@@ -20,8 +20,8 @@ public class LaunchFireball implements Listener {
         if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK) return;
 
         Player player = event.getPlayer();
-        if (ArenaManager.getInstance().getArenaFromPlayer(player).getType() != Mode.FIREBALL_JUMP ||
-                ArenaManager.getInstance().getArenaFromPlayer(player).getType() == null) return;
+        if (ArenaManager.getInstance().getArenaFromPlayer(player).getType() == null ||
+                ArenaManager.getInstance().getArenaFromPlayer(player).getType() != Mode.FIREBALL_JUMP) return;
 
         if (player.getItemInHand().isSimilar(new FireballItem().item())) {
             summonFireball(player);
