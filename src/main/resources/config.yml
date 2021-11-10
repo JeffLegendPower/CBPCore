@@ -1,3 +1,5 @@
+# spawn_loc format: <x coordinate>, <y coordinate>, <z coordinate>, [yaw], [pitch]
+
 SQL:
   host: ''
   port: '3306'
