@@ -27,11 +27,12 @@ public class LeaveArena implements Listener {
     public void onPlayerLeaveArena(PlayerLeaveArenaEvent event) {
         Player player = event.getPlayer();
         player.teleport(new Config().getSpawn());
-        InventoryUtils.setItem(player, 0, GUICompass.getGUICompass());
         ArenaManager arenaManager = ArenaManager.getInstance();
         Arena arena = arenaManager.getArenaFromPlayer(player);
         if (arena == null) return;
         arenaManager.deleteArena(arena);
+        InventoryUtils.clearInventory(player);
+        InventoryUtils.setItem(player, 0, GUICompass.getGUICompass());
     }
 
     @EventHandler(priority = EventPriority.HIGH)
