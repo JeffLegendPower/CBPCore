@@ -35,11 +35,23 @@
                 <executions>
                     <execution>
                         <phase>package</phase>
-<!--                        <goals>-->
-<!--                            <goal>shade</goal>-->
-<!--                        </goals>-->
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
+<!--                            <artifactSet>-->
+<!--                                <excludes>-->
+<!--                                    <exclude>org.github.paperspigot:paperspigot-api:1.8.8-R0.1-SNAPSHOT</exclude>-->
+<!--                                    <exclude>com.grinderwolf:slimeworldmanager-api:2.2.1</exclude>-->
+<!--                                    <exclude>fr.minuskube.inv:smart-invs:1.2.7</exclude>-->
+<!--                                    <exclude>net.minecraft.server:minecraft:1.8.8</exclude>-->
+<!--                                    <exclude>net.citizensnpcs:citizens-main:2.0.27-SNAPSHOT</exclude>-->
+<!--                                    <exclude>com.comphenix.protocol:ProtocolLib:4.7.0</exclude>-->
+<!--                                    <exclude>net.bytebuddy:byte-buddy:jar:1.11.0</exclude>-->
+<!--                                    <exclude>com.comphenix.protocol:ProtocolLib:jar:4.7.0</exclude>-->
+<!--                                </excludes>-->
+<!--                            </artifactSet>-->
                         </configuration>
                     </execution>
                 </executions>
@@ -62,22 +74,22 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
-        <repository>
-            <id>OnARandomBox</id>
-            <url>http://repo.onarandombox.com/content/groups/public/</url>
-        </repository>
+<!--        <repository>-->
+<!--            <id>OnARandomBox</id>-->
+<!--            <url>http://repo.onarandombox.com/content/groups/public/</url>-->
+<!--        </repository>-->
         <repository>
             <id>glaremasters</id>
             <url>https://repo.glaremasters.me/repository/concuncan/</url>
         </repository>
-        <repository>
-            <id>enginehub-maven</id>
-            <url>https://maven.enginehub.org/repo/</url>
-        </repository>
-        <repository>
-            <id>sk89q-repo</id>
-            <url>https://maven.enginehub.org/repo/</url>
-        </repository>
+<!--        <repository>-->
+<!--            <id>enginehub-maven</id>-->
+<!--            <url>https://maven.enginehub.org/repo/</url>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>sk89q-repo</id>-->
+<!--            <url>https://maven.enginehub.org/repo/</url>-->
+<!--        </repository>-->
         <repository>
             <id>everything</id>
             <url>https://repo.citizensnpcs.co/</url>
@@ -95,11 +107,17 @@
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.onarandombox.multiversecore</groupId>-->
+<!--            <artifactId>Multiverse-Core</artifactId>-->
+<!--            <version>4.2.2</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>com.onarandombox.multiversecore</groupId>
-            <artifactId>Multiverse-Core</artifactId>
-            <version>4.2.2</version>
-            <scope>provided</scope>
+            <groupId>xyz.xenondevs</groupId>
+            <artifactId>particle</artifactId>
+            <version>1.6.6</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.grinderwolf</groupId>
@@ -113,20 +131,20 @@
             <version>1.2.7</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.sk89q.worldguard</groupId>
-            <artifactId>worldguard-bukkit</artifactId>
-            <version>6.2</version>
-            <scope>system</scope>
-            <systemPath>C:/Server/1.8 Server/plugins/worldguard-6.2.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>com.sk89q.worldedit</groupId>
-            <artifactId>worldedit-core</artifactId>
-            <version>6.1</version>
-            <scope>system</scope>
-            <systemPath>C:/Server/1.8 Server/plugins/worldedit-bukkit-6.1.jar</systemPath>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.sk89q.worldguard</groupId>-->
+<!--            <artifactId>worldguard-bukkit</artifactId>-->
+<!--            <version>6.2</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>C:/Server/1.8 Server/plugins/worldguard-6.2.jar</systemPath>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.sk89q.worldedit</groupId>-->
+<!--            <artifactId>worldedit-core</artifactId>-->
+<!--            <version>6.1</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>C:/Server/1.8 Server/plugins/worldedit-bukkit-6.1.jar</systemPath>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>net.minecraft.server</groupId>
             <artifactId>minecraft</artifactId>
@@ -145,6 +163,7 @@
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib</artifactId>
             <version>4.7.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
